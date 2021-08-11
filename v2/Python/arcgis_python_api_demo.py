@@ -15,6 +15,7 @@ from arcgis.features import FeatureLayerCollection
 ftr_lyrs = FeatureLayerCollection(
     'https://pdihosting.azurecloudgov.us/arcgis/rest/services/AgCROS/COFOARD4/FeatureServer')
 print(ftr_lyrs.layers)
+
 # Find the table called "MetaUnits_Unit"
 i = 0
 
