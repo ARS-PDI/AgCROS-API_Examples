@@ -34,14 +34,14 @@ print(num_records)
 records = ftr_lyr.query(where='1=1')
 records.features[0].attributes['unit_id']
 
-# Display the 5 records only (as a Spacial DataFrame). `return_all_records` must be set to False
+# Display the 5 records only (as a Spatial DataFrame). `return_all_records` must be set to False
 # to set the record count
 records = ftr_lyr.query(where='1=1', return_geometry=False,
                         return_all_records=False, result_record_count=5)
 print(records.sdf)
+
 # Find the measurement or management layer with the most records, query it, and display it
-index = max_records_index = 0
-max_num_records = 0
+index = max_records_index = max_num_records = 0
 
 for ftr_lyr in ftr_lyrs.layers:
     if ftr_lyr.properties.name.startswith('Meas') or ftr_lyr.properties.name.startswith('Mgt'):
